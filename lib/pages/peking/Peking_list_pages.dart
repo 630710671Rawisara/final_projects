@@ -61,11 +61,7 @@ class _PekingListPageState extends State<PekingListPage> {
         itemCount: projects.length,
         itemBuilder: (BuildContext context, int index) {
           var project = projects[index];
-          var myTextStylescript = const TextStyle(fontSize: 12, color: Colors.black54);
-          var amountStyle = const TextStyle(
-              fontSize: 16.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.black54);
+          var myTextStylescript = const TextStyle(fontSize: 16, color: Colors.black54);
 
           return Card(
             child: InkWell(
@@ -84,8 +80,8 @@ class _PekingListPageState extends State<PekingListPage> {
                         children: [
                           Image.asset(
                             project.imageURL,
-                            width: 50.0,
-                            height: 50.0,
+                            width: 200.0,
+                            height: 200.0,
                             fit: BoxFit.contain, //ไม่ให้รูปมีขอบขาว มีเต็มพื้นที่
                           ),
                           /*Container(
@@ -102,7 +98,9 @@ class _PekingListPageState extends State<PekingListPage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(project.name,overflow: TextOverflow.ellipsis,),
+                                  Text(project.name,
+                                    style: TextStyle(fontSize: 20.0)
+                                    ,overflow: TextOverflow.ellipsis,),
                                   const SizedBox(height: 8.0),
                                   Text('${project.description.toString()} ',
                                     style: myTextStylescript,overflow: TextOverflow.ellipsis,),

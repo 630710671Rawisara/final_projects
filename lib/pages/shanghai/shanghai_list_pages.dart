@@ -1,5 +1,7 @@
+import 'package:final_project/pages/shanghai/shanghai_detail_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:final_project/models/project_detail.dart';
+import 'package:intl/intl.dart';
 
 class ShanghaiListPages extends StatefulWidget {
   const ShanghaiListPages({Key? key}) : super(key: key);
@@ -55,6 +57,82 @@ class _ShanghaiListPagesState extends State<ShanghaiListPages> {
           ],
         ),
       ),
+      body: ListView.builder(
+        itemCount: projects.length,
+        itemBuilder: (BuildContext context, int index) {
+          var project = projects[index];
+          var myTextStylescript = const TextStyle(fontSize: 16, color: Colors.black54);
+
+          return Card(
+              child: InkWell(
+                onTap: () {
+                  _handleCickProjectItem(projects[index]);
+                },
+                //ถ้าใช้แค่ _handleCickProjectItem; ไม่ต้อง () {} ต่อท้ายฟังก์ชัน
+                child: Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              project.imageURL,
+                              width: 200.0,
+                              height: 200.0,
+                              fit: BoxFit.contain, //ไม่ให้รูปมีขอบขาว มีเต็มพื้นที่
+                            ),
+                            /*Container(
+                        width: 80.0,
+                        height: 80.0,
+                        color: Colors.lightBlueAccent,
+                      ),*/
+                            const SizedBox(
+                              width: 10.0,
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(project.name,
+                                      style: TextStyle(fontSize: 20.0)
+                                      ,overflow: TextOverflow.ellipsis,),
+                                    const SizedBox(height: 8.0),
+                                    Text('${project.description.toString()} ',
+                                      style: myTextStylescript,overflow: TextOverflow.ellipsis,),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 8.0,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              )
+          );
+        },
+      ),
     );
   }
+
+  void _handleCickProjectItem(ProjectDetail p) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ShanghaiDetailPages(
+          project: p!,
+        ),
+      ),
+    );
+  }
+
 }

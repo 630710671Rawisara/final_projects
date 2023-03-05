@@ -1,16 +1,99 @@
 import 'package:flutter/material.dart';
+import 'package:final_project/models/project_detail.dart';
 
-class PekingDetailPage extends StatefulWidget {
-  const PekingDetailPage({Key? key, required project}) : super(key: key);
+class PekingDetailPage extends StatelessWidget {
+  final ProjectDetail project;
 
-  @override
-  State<PekingDetailPage> createState() => _PekingDetailPageState();
-}
+  const PekingDetailPage({Key? key, required this.project}) : super(key: key);
 
-class _PekingDetailPageState extends State<PekingDetailPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(project.name),
+        ),
+        body: ListView(
+          children: [
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 5, 20, 3),
+                child: Container(
+                  child: Text(
+                    project.name,
+                    style: TextStyle(fontSize: 30.0),
+                  ),
+                ),
+              ),
+              color: Colors.amber[50],
+            ),
+            Container(
+              color: Colors.amber[50],
+              child: Image.asset(
+                project.imageURL,
+              ),
+            ),
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
+                child: Container(
+                  child: Text(
+                    '  ${project.description}',
+                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  ),
+                ),
+              ),
+              color: Colors.amber[50],
+            ),
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
+                child: Container(
+                  child: Text(
+                    'Tel: ${project.phone}',
+                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  ),
+                ),
+              ),
+              color: Colors.amber[50],
+            ),
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
+                child: Container(
+                  child: Text(
+                    'E-mail: ${project.email}',
+                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  ),
+                ),
+              ),
+              color: Colors.amber[50],
+            ),
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
+                child: Container(
+                  child: Text(
+                    'location: ${project.location}',
+                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  ),
+                ),
+              ),
+              color: Colors.amber[50],
+            ),
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
+                child: Container(
+                  child: Text(
+                    'website: ${project.website}',
+                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  ),
+                ),
+              ),
+              color: Colors.amber[50],
+            ),
+          ],
+        )
+    );
   }
 }
-
