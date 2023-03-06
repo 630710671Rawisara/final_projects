@@ -14,7 +14,7 @@ class _PekingListPageState extends State<PekingListPage> {
   List<ProjectDetail> projects = [
     ProjectDetail(
       name: 'Tsinghun University',
-      description: 'The campus of Tsinghua University is situated in northwest Beijing on the site of the former imperial gardens of the Qing Dynasty, and surrounded by a number of historical sites.',
+      description: '  The campus of Tsinghua University is situated in northwest Beijing on the site of the former imperial gardens of the Qing Dynasty, and surrounded by a number of historical sites.',
       location: 'Tsinghua  University Haidian District, Beijing, 100084, P. R. China',
       imageURL: 'assets/images/p1.jpg',
       website: 'https://www.tsinghua.edu.cn/en/index.htm',
@@ -23,7 +23,7 @@ class _PekingListPageState extends State<PekingListPage> {
     ),
     ProjectDetail(
       name: 'Peking University',
-      description: 'Peking University is a cradle of top-quality and creative students, a major source of cutting-edge science and knowledge innovation, and a key bridge for international exchange. It has six faculties, namely Humanities, Social Sciences, Economics and Management, Science, Information Technology and Engineering, as well as Health Science. It consists of 55 schools and departments, 60 research entities, and ten affiliated hospitals. There are more than 48,600 students (including nearly 2,500 international students) as well as over 12,600 faculty and staff members including over 123 academicians of the Chinese Academy of Sciences and the Chinese Academy of Engineering.',
+      description: '  Peking University is a cradle of top-quality and creative students, a major source of cutting-edge science and knowledge innovation, and a key bridge for international exchange. It has six faculties, namely Humanities, Social Sciences, Economics and Management, Science, Information Technology and Engineering, as well as Health Science. It consists of 55 schools and departments, 60 research entities, and ten affiliated hospitals. There are more than 48,600 students (including nearly 2,500 international students) as well as over 12,600 faculty and staff members including over 123 academicians of the Chinese Academy of Sciences and the Chinese Academy of Engineering.',
       location: 'No.5 Yiheyuan Road, Haidian District, Beijing 100871, P.R.China',
       imageURL: 'assets/images/p2.jpg',
       website: 'https://english.pku.edu.cn/',
@@ -32,7 +32,7 @@ class _PekingListPageState extends State<PekingListPage> {
     ),
     ProjectDetail(
       name: 'Beijing Institude of Technology University',
-      description: 'The university has established a multidisciplinary academic structure, offering a variety of programs, and is involved in diversified research in the fields of Science, Engineering, Economics, Management, Liberal Arts, and Law. It is a Chinese state Double First Class University Plan university, as identified by the Ministry of Education.',
+      description: '  The university has established a multidisciplinary academic structure, offering a variety of programs, and is involved in diversified research in the fields of Science, Engineering, Economics, Management, Liberal Arts, and Law. It is a Chinese state Double First Class University Plan university, as identified by the Ministry of Education.',
       location: 'No. 5, South Street, Zhongguancun, Haidian District, Beijing,100081',
       imageURL: 'assets/images/p3.jpg',
       website: 'https://english.bit.edu.cn/',

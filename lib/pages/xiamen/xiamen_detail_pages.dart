@@ -48,9 +48,18 @@ class XiamenDetailPages extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
                 child: Container(
-                  child: Text(
-                    'Tel: ${project.phone}',
-                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Icon(
+                          Icons.phone,
+                        ),
+                      ),
+                      Text(
+                        '  Tel: ${project.phone}',
+                        style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -60,9 +69,18 @@ class XiamenDetailPages extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
                 child: Container(
-                  child: Text(
-                    'E-mail: ${project.email}',
-                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Icon(
+                          Icons.mail_outline_outlined,
+                        ),
+                      ),
+                      Text(
+                        '  E-mail: ${project.email}',
+                        style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -72,9 +90,18 @@ class XiamenDetailPages extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
                 child: Container(
-                  child: Text(
-                    'location: ${project.location}',
-                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Icon(
+                          Icons.location_on_outlined,
+                        ),
+                      ),
+                      Text(
+                        '  location: ${project.location}',
+                        style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -84,9 +111,18 @@ class XiamenDetailPages extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 3),
                 child: Container(
-                  child: Text(
-                    'website: ${project.website}',
-                    style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Icon(
+                          Icons.web,
+                        ),
+                      ),
+                      Text(
+                        '  website: ${project.website}',
+                        style: TextStyle(fontSize: 20.0, color: Colors.black54),
+                      ),
+                    ],
                   ),
                 ),
               ),
