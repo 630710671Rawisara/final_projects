@@ -14,7 +14,7 @@ class Project {
     required this.name3,
     required this.imgeURL1,
     required this.imgeURL2,
-    required this.imgeURL,
+    required this.imgeURL3,
   });
 
 }
