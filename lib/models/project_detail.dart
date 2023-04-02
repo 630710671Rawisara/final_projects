@@ -14,6 +14,6 @@ class ProjectDetail {
     required this.imageURL,
     required this.website,
     required this.phone,
-    required this.email,
+    required this.emai,
   });
 }
