@@ -92,7 +92,7 @@ class _FirstPageState extends State<FirstPage> {
                     _handleCickProjectItemPeking(projects[0]);
                   });
                 },
-                child: Text('Peking')
+                child: Text('Peking ')
             ),
           ),
           Container(
